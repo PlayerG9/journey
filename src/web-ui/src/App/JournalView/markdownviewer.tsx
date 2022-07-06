@@ -8,7 +8,7 @@ export default function MarkdownViewer(props: viewerProps){
         return null
     }
 
-    return <>
-        <div className="markdown-body h-centered" dangerouslySetInnerHTML={{__html: props.html}} />
-    </>
+    return <div className="markdown-container">
+        <div className="markdown-body" dangerouslySetInnerHTML={{__html: props.html}} />
+    </div>
 }

@@ -1,3 +1,26 @@
+#root {
+  position: relative;
+  min-height: 100%;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+body.light-mode a, body.light-mode a:visited {
+  color: #333;
+}
+body.dark-mode {
+  background-color: #1a1919;
+  color: #999;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode a, body.dark-mode a:visited {
+  color: #999;
+}
+
+
 /* used to prevent text-selection */
 .no-select {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -17,21 +40,17 @@
   margin: 0 auto;
   padding: 45px;
 }
+body.light-mode .markdown-body {
+  background-color: transparent;
+  color: #333;
+}
+body.dark-mode .markdown-body {
+  background-color: transparent;
+  color: #999;
+}
 
 @media (max-width: 767px) {
   .markdown-body {
     padding: 15px;
   }
-}
-
-/* positioning */
-.h-centered {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.v-centered {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }

@@ -1,0 +1,12 @@
+.header-menu {
+    width: 100%;
+    background-color: lightblue;
+}
+
+.header-menu > * {
+    display: inline-block;
+}
+
+.header-menu > .icon > * {
+    display: inline-block;
+}
