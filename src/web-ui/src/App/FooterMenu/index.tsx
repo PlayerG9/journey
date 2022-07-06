@@ -9,8 +9,8 @@ export default function FooterMenu(){
             <DarkModeHandler/>
         </div>
         <div className='links'>
-            <Link to="https://github.com/PlayerG9">Github</Link>
-            <Link to="https://playerg9.github.io/">Website</Link>
+            <a href="https://github.com/PlayerG9" target="_blank">Github</a>
+            <a href="https://playerg9.github.io/" target="_blank">Website</a>
             <Link to="/#blog">Blog</Link>
             <Link to="/#journal">Journal</Link>
             <Link to="/about">About</Link>
