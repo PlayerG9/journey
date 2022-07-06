@@ -8,3 +8,14 @@ start by [viewing it interactively](https://playerg9.github.io/journey)
 > HTML-Parser  
 > https://github.com/chishui/JSSoup  
 > `$ npm install jssoup`
+
+> Markdown Renderer  
+> https://docs.github.com/en/rest/markdown#render-a-markdown-document
+> https://github.com/sindresorhus/github-markdown-css  
+> > npm install github-markdown-css
+> https://www.npmjs.com/package/react-html-parser
+
+```
+:is(header, footer) p:hover {
+
+}```
