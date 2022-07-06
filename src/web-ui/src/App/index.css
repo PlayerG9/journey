@@ -7,3 +7,31 @@
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
+
+/* github-markdown-css */
+.markdown-body {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
+}
+
+/* positioning */
+.h-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.v-centered {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

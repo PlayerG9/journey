@@ -1,6 +1,8 @@
 .homepage {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
     max-width: 1000px;
+}
+
+.homepage h1 {
+    text-align: center;
 }

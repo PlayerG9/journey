@@ -1,10 +1,14 @@
 interface viewerProps {
-    markdown: String
+    html: string | undefined
 }
 
 
 export default function MarkdownViewer(props: viewerProps){
+    if(!props.html){
+        return null
+    }
+
     return <>
-        {props.markdown}
+        <div className="markdown-body h-centered" dangerouslySetInnerHTML={{__html: props.html}} />
     </>
 }
