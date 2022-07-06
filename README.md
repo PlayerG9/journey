@@ -3,6 +3,12 @@ helpful code snippets, links or other stuff needed for programming
 
 start by [viewing it interactively](https://playerg9.github.io/journey)
 
+
+<a href="https://playerg9.github.io/journey">
+    <img src="https://raw.githubusercontent.com/PlayerG9/journey/main/README.assets/qrcode_playerg9.github.io.png" alt="website">
+</a>
+
+
 # Maybe helpful (for this project)
 
 > HTML-Parser  
