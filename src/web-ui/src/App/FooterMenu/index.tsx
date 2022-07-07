@@ -1,5 +1,6 @@
 import './index.css'
 import { Link } from 'react-router-dom'
+import ExternalLink from '../components/externalLink'
 import DarkModeHandler from './darkModeHandler'
 
 
@@ -9,8 +10,8 @@ export default function FooterMenu(){
             <DarkModeHandler/>
         </div>
         <div className='links'>
-            <a href="https://github.com/PlayerG9" target="_blank">Github</a>
-            <a href="https://playerg9.github.io/" target="_blank">Website</a>
+            <ExternalLink dest='https://github.com/PlayerG9'>Github</ExternalLink>
+            <ExternalLink dest='https://playerg9.github.io/'>Website</ExternalLink>
             <Link to="/#blog">Blog</Link>
             <Link to="/#journal">Journal</Link>
             <Link to="/about">About</Link>

@@ -3,15 +3,15 @@ import { useParams } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import Loader from '../components/loader'
 import ErrorMessage from '../components/errormessage'
-import { loadJournalContent } from './apiCalls'
-import MarkdownViewer from './markdownviewer'
+import { loadGithubJournalContent } from '../apiCalls/apiCalls'
+import MarkdownHtmlViewer from '../components/markdownHtmlViewer'
 
 
 export default function JournalView(){
     const params = useParams()
     const journalKey =  params.journalKey
 
-    const apiCall = useQuery(['journal', journalKey], () => loadJournalContent(journalKey))
+    const apiCall = useQuery(['journal', journalKey], () => loadGithubJournalContent(journalKey))
 
     if(apiCall.isLoading){
         return <Loader/>
@@ -21,6 +21,6 @@ export default function JournalView(){
     }
 
     return <>
-        <MarkdownViewer html={apiCall.data} />
+        <MarkdownHtmlViewer html={apiCall.data} />
     </>
 }

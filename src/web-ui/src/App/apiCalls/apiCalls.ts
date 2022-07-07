@@ -1,6 +1,7 @@
 import { HttpError } from "../generell"
 
-export async function loadJournalContent(key: String | undefined) {
+
+export async function loadGithubJournalContent(key: String | undefined) {
     const url = `https://raw.githubusercontent.com/PlayerG9/journey/main/journal/${key}/README.md`
     const response = await fetch(url)
     if(!response.ok){

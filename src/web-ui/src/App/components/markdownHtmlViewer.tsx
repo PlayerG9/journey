@@ -3,7 +3,7 @@ interface viewerProps {
 }
 
 
-export default function MarkdownViewer(props: viewerProps){
+export default function MarkdownHtmlViewer(props: viewerProps){
     if(!props.html){
         return null
     }
