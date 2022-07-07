@@ -1,4 +1,4 @@
-import { convertMarkdownToHtml } from '../apiCalls/apiCalls'
+import { convertMarkdownToHtml } from '../apiCalls'
 import MarkdownHtmlViewer from '../components/markdownHtmlViewer'
 import { useEffect, useState } from 'react'
 

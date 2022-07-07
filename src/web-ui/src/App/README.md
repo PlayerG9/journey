@@ -60,3 +60,18 @@
     content: '❌';
 }
 ```
+
+```html
+<body>
+<form action="/action_page.php" method="get">
+<input list="cities" name="city" value="San Diego">
+<datalist id="cities">
+    <option value="San Diego">
+    <option value="Del Mar">
+    <option value="Solana Beach">
+    <option value="Escondido">
+    <option value="Carlsbad">
+</datalist>
+</form>
+</body>
+```

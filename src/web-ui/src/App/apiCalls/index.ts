@@ -13,6 +13,33 @@ export async function loadGithubJournalContent(key: String | undefined) {
 }
 
 
+export async function loadGithubJournalMetadata(key: String | undefined) {
+    const url = `https://raw.githubusercontent.com/PlayerG9/journey/main/journal/${key}/metadata.json`
+    const response = await fetch(url)
+    if(!response.ok){
+        throw new HttpError(response.status)
+    }
+    const data = await response.json()
+    return data
+}
+
+
+export async function listGithubDirectory(path: string) {
+    const url = `https://api.github.com/repos/PlayerG9/Journey/contents/${path}`
+    const response = await fetch(url)
+    if(!response.ok){
+        throw new HttpError(response.status)
+    }
+    const data = await response.json()
+    return data
+}
+
+
+export async function listGithubJournals(){
+    return await listGithubDirectory('journal')
+}
+
+
 export async function convertMarkdownToHtml(markdown: String) {
     const url = `https://api.github.com/markdown`
     const response = await fetch(url, {

@@ -13,7 +13,10 @@ export default function JourneyRouter(){
             <Route path="read">
                 <Route index element={<Page404NotFound/>}/>
                 <Route path=":journalKey" element={<JournalView/>}/>
-                <Route path="*" element={<Page404NotFound />} />
+            </Route>
+            <Route path="blog">
+                <Route index element={<Page404NotFound/>}/>
+                <Route path=":blogid" element={<Page404NotFound/>}/>
             </Route>
             <Route path="*" element={<Page404NotFound />} />
         </Routes>
