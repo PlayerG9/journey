@@ -4,7 +4,7 @@ import headerIcon from './header-icon.png'
 
 
 export default function HeaderMenu(){
-    return <div className='header-menu'>
+    return <div className='header-menu primary-bg'>
         <Link className='icon' to="/">
             <img src={headerIcon} alt="icon"/>
             <p>PlayerG9/Journal</p>

@@ -1,0 +1,48 @@
+body.light-mode {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease;
+
+    .primary-bg {
+        background-color: cornflowerblue;
+        color: #222;
+    }
+    .secondary-bg {
+        background-color: lightblue;
+        color: #333;
+    }
+
+    a, a:visited {
+        color: inherit;
+    }
+
+    .markdown-body {
+        background-color: transparent;
+        color: #333;
+    }
+}
+
+
+body.dark-mode {
+    background-color: #1a1919;
+    color: #aaa;
+    transition: background-color 0.3s ease;
+
+    .primary-bg {
+        background-color: darkblue;
+        color: #ccc;
+    }
+    .secondary-bg {
+        background-color: cadetblue;
+        color: #ccc;
+    }
+
+    a, a:visited {
+        color: inherit;
+    }
+
+    .markdown-body {
+        background-color: transparent;
+        color: #999;
+    }
+}

@@ -1,4 +1,5 @@
 import './index.scss'
+import './color-modes.scss'
 import './components/index.scss'
 // import 'github-markdown-css/github-markdown.css'
 import 'github-markdown-css/github-markdown-light.css'

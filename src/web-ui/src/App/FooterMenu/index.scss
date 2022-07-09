@@ -1,6 +1,5 @@
 .footer-menu {
     width: 100%;
-    background-color: lightblue;
     text-align: center;
 
     > .links {
@@ -16,9 +15,11 @@
     }
 
     .dark-mode-button {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         border: none;
         background-color: transparent;
+        font-size: 1.5em;
+        color: inherit;
     }
 }

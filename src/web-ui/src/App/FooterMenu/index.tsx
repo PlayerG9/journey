@@ -5,7 +5,7 @@ import DarkModeHandler from './darkModeHandler'
 
 
 export default function FooterMenu(){
-    return <div className='footer-menu'>
+    return <div className='footer-menu primary-bg'>
         <div className='dark-mode-toggle'>
             <DarkModeHandler/>
         </div>

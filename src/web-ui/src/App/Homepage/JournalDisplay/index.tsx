@@ -29,7 +29,7 @@ function JournalItemDisplay(props: {journalKey: string}){
 
     const data = result.data
 
-    return <div className='box-list-item'>
+    return <div className='box-list-item secondary-bg'>
         <h3>
             {data?.title ?? props.journalKey}
         </h3>

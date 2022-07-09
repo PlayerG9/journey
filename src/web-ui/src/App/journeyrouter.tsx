@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Homepage from './Homepage'
 import Editor from './Editor'
 import JournalView from './JournalView'
+import AboutPage from './AboutPage'
 import Page404NotFound from './Page404NotFound'
 
 
@@ -18,6 +19,7 @@ export default function JourneyRouter(){
                 <Route index element={<Page404NotFound/>}/>
                 <Route path=":blogid" element={<Page404NotFound/>}/>
             </Route>
+            <Route path="about" element={<AboutPage/>}/>
             <Route path="*" element={<Page404NotFound />} />
         </Routes>
     </>

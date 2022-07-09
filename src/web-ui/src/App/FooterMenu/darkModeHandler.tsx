@@ -1,8 +1,8 @@
 import { useState } from "react"
 
 
-const LIGHT = "☀"
-const DARK = "☾"
+const LIGHTICON = "☀"
+const DARKICON = "☾"
 const LIGHTTAG = "light-mode"
 const DARKTAG = "dark-mode"
 
@@ -22,7 +22,7 @@ export default function DarkModeHandler(){
 
     return <>
         <button className="dark-mode-button" onClick={() => setDark(!isDark)}>
-            {isDark ? DARK : LIGHT}
+            {isDark ? DARKICON : LIGHTICON}
         </button>
     </>
 }
