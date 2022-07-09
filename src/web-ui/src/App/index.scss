@@ -1,23 +1,27 @@
 #root {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body.light-mode {
-  background-color: #fff;
-  color: #333;
-  transition: background-color 0.3s ease;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease;
+
+    a, a:visited {
+        color: #333;
+    }
 }
-body.light-mode a, body.light-mode a:visited {
-  color: #333;
-}
+
 body.dark-mode {
-  background-color: #1a1919;
-  color: #999;
-  transition: background-color 0.3s ease;
-}
-body.dark-mode a, body.dark-mode a:visited {
-  color: #999;
+    background-color: #1a1919;
+    color: #999;
+    transition: background-color 0.3s ease;
+
+
+    a, a:visited {
+        color: #999;
+    }
 }
 
 
@@ -33,24 +37,24 @@ body.dark-mode a, body.dark-mode a:visited {
 
 /* github-markdown-css */
 .markdown-body {
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 200px;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 45px;
-}
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+    }
 body.light-mode .markdown-body {
-  background-color: transparent;
-  color: #333;
+    background-color: transparent;
+    color: #333;
 }
 body.dark-mode .markdown-body {
-  background-color: transparent;
-  color: #999;
+    background-color: transparent;
+    color: #999;
 }
 
 @media (max-width: 767px) {
-  .markdown-body {
-    padding: 15px;
-  }
+    .markdown-body {
+        padding: 15px;
+    }
 }
