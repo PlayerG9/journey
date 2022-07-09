@@ -1,0 +1,23 @@
+.editor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+
+    > .input-panel {
+        min-width: 300px;
+        min-height: 500px;
+    }
+
+    > .output-panel {
+        min-width: 300px;
+        min-height: 500px;
+    }
+
+    > * > * {
+        width: 100%;
+        height: 100%;
+    }
+    
+}

@@ -1,5 +1,5 @@
-import './index.css'
-import './components/index.css'
+import './index.scss'
+import './components/index.scss'
 // import 'github-markdown-css/github-markdown.css'
 import 'github-markdown-css/github-markdown-light.css'
 import { QueryClient, QueryClientProvider } from 'react-query'

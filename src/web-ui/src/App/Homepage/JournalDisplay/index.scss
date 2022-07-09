@@ -1,0 +1,40 @@
+.journal-display {
+    > .box-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: space-around;
+        gap: 10px 15px;
+
+        > a {
+            text-decoration: none;
+            flex-grow: 1;
+        }
+
+        .box-list-item {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: beige;
+
+            > h3 {
+                text-align: center;
+            }
+
+            > div {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2px 5px;
+
+                > a {
+                    background-color: aquamarine;
+                    border-radius: 5px;
+                    padding: 2px;
+                    text-decoration: none;
+                }
+            }                
+        }
+    }
+}

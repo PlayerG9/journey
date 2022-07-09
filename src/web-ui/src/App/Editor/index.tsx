@@ -1,4 +1,4 @@
-import './index.css'
+import './index.scss'
 import { useState, useEffect } from 'react'
 import MarkdownRenderer from './markdownRenderer'
 

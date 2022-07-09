@@ -1,0 +1,24 @@
+.footer-menu {
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+
+    > .links {
+        > * {
+            margin-left: 2px;
+            margin-right: 2px;
+            text-decoration: none;
+        }
+    }
+
+    .copyright {
+    
+    }
+
+    .dark-mode-button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+    }
+}

@@ -1,4 +1,4 @@
-import './index.css'
+import './index.scss'
 import { useParams } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import Loader from '../components/loader'
