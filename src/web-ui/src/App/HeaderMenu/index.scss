@@ -1,12 +1,25 @@
 .header-menu {
     width: 100%;
     background-color: lightblue;
-}
 
-.header-menu > * {
-    display: inline-block;
-}
+    > * {
+        display: inline-block;
 
-.header-menu > .icon > * {
-    display: inline-block;
+        > * {
+            display: inline-block;
+        }
+        
+    }
+
+    .icon {
+        > img {
+            height: 50px;
+            margin-top: auto;
+            margin-bottom: auto;
+            vertical-align: middle;
+        }
+        > p {
+            font-size: 1.2em;
+        }
+    }
 }
