@@ -5,7 +5,7 @@ export async function loadGithubJournalContent(key: String | undefined) {
     const url = `https://raw.githubusercontent.com/PlayerG9/journey/main/journal/${key}/README.md`
     const response = await fetch(url)
     if(!response.ok){
-        throw new HttpError(response.status)
+        throw new HttpError(response.status, url)
     }
     const markdown = await response.text()
     const html = await convertMarkdownToHtml(markdown)
@@ -17,7 +17,7 @@ export async function loadGithubJournalMetadata(key: String | undefined) {
     const url = `https://raw.githubusercontent.com/PlayerG9/journey/main/journal/${key}/metadata.json`
     const response = await fetch(url)
     if(!response.ok){
-        throw new HttpError(response.status)
+        throw new HttpError(response.status, url)
     }
     const data = await response.json()
     return data
@@ -28,7 +28,7 @@ export async function listGithubDirectory(path: string) {
     const url = `https://api.github.com/repos/PlayerG9/Journey/contents/${path}`
     const response = await fetch(url)
     if(!response.ok){
-        throw new HttpError(response.status)
+        throw new HttpError(response.status, url)
     }
     const data = await response.json()
     return data
@@ -52,7 +52,7 @@ export async function convertMarkdownToHtml(markdown: String) {
         })
     })
     if(!response.ok){
-        throw new HttpError(response.status)
+        throw new HttpError(response.status, url)
     }
     const data = await response.text()
     return data
