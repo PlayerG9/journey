@@ -3,6 +3,7 @@ import Homepage from './pages/Home'
 import Editor from './pages/Editor'
 import JournalView from './pages/JournalView'
 import AboutPage from './pages/About'
+import TestPage from './pages/Test'
 import Page404NotFound from './pages/404NotFound'
 
 
@@ -20,6 +21,7 @@ export default function JourneyRouter(){
                 <Route path=":blogid" element={<Page404NotFound/>}/>
             </Route>
             <Route path="about" element={<AboutPage/>}/>
+            <Route path="testing" element={<TestPage/>}/>
             <Route path="*" element={<Page404NotFound />} />
         </Routes>
     </>
