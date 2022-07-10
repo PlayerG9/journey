@@ -38,7 +38,9 @@ from .functionality import my_function
 r"""
 a description is always helpful for you file
 
-this way, if the other programmer import this file from your package (from my_package import functionality) and the uses help() on it he get's more information
+this way, if the other programmer import this file from your package
+(from my_package import functionality) and the uses help() on it
+he get's more information
 """
 
 def my_function():
