@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
-import Homepage from './Homepage'
-import Editor from './Editor'
-import JournalView from './JournalView'
-import AboutPage from './AboutPage'
-import Page404NotFound from './Page404NotFound'
+import Homepage from './pages/Home'
+import Editor from './pages/Editor'
+import JournalView from './pages/JournalView'
+import AboutPage from './pages/About'
+import Page404NotFound from './pages/404NotFound'
 
 
 export default function JourneyRouter(){

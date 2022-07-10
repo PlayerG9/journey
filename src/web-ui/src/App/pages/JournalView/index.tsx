@@ -1,10 +1,10 @@
 import './index.scss'
 import { useParams } from 'react-router-dom'
 import { useQuery } from 'react-query'
-import Loader from '../components/loader'
-import ErrorMessage from '../components/errormessage'
-import { loadGithubJournalContent } from '../apiCalls'
-import MarkdownHtmlViewer from '../components/markdownHtmlViewer'
+import Loader from '../../components/loader'
+import ErrorMessage from '../../components/errormessage'
+import { loadGithubJournalContent } from '../../apiCalls'
+import MarkdownHtmlViewer from '../../components/markdownHtmlViewer'
 
 
 export default function JournalView(){

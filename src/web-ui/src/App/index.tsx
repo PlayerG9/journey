@@ -1,12 +1,10 @@
 import './index.scss'
-import './color-modes.scss'
-import './markdown-colors.scss'
+import './project-css-files/color-modes.scss'
+import './project-css-files/markdown-colors.scss'
 import './components/index.scss'
-// import 'github-markdown-css/github-markdown.css'
-// import 'github-markdown-css/github-markdown-light.css'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import HeaderMenu from './HeaderMenu'
-import FooterMenu from './FooterMenu'
+import HeaderMenu from './menus/HeaderMenu'
+import FooterMenu from './menus/FooterMenu'
 import JourneyRouter from './journeyrouter'
 
 

@@ -1,6 +1,6 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
-import ExternalLink from '../components/externalLink'
+import ExternalLink from '../../components/externalLink'
 import DarkModeHandler from './darkModeHandler'
 
 

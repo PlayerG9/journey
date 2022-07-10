@@ -1,6 +1,6 @@
 import './index.scss'
 import { useQuery } from 'react-query'
-import { listGithubJournals, loadGithubJournalMetadata } from '../../apiCalls'
+import { listGithubJournals, loadGithubJournalMetadata } from '../../../apiCalls'
 import { Link } from 'react-router-dom'
 
 
