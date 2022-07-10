@@ -16,8 +16,10 @@ body.light-mode {
         color: inherit;
     }
 
+    // markdown related
+
     .markdown-body {
-        background-color: transparent;
+        background-color: transparent!important;
         color: #333;
     }
 }
@@ -41,8 +43,10 @@ body.dark-mode {
         color: inherit;
     }
 
+    // markdown related
+
     .markdown-body {
-        background-color: transparent;
+        background-color: transparent!important;
         color: #999;
     }
 }
