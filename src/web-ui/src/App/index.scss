@@ -2,6 +2,9 @@
     position: relative;
     min-height: 100%;
 }
+body {
+    max-width: 100vw;
+}
 
 /* used to prevent text-selection */
 .no-select {
@@ -14,6 +17,9 @@
 }
 
 /* github-markdown-css */
+.markdown-container {
+    width: 100%!important;
+}
 .markdown-body {
     box-sizing: border-box;
     width: 100%;
