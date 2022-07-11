@@ -20,5 +20,9 @@ def webhook():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host="127.0.0.1", debug=False)
 ```
+
+the `host` option in `app.run()` is optional and is per default `localhost`/`127.0.0.1`.
+If you want your webhook to be available on your local network you need to pass `0.0.0.0`.
+This is (like `127.0.0.1`) a special case.
