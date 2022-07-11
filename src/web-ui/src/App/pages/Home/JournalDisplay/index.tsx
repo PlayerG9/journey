@@ -10,7 +10,7 @@ export default function JournalDisplay(){
     const journalItems = (apiCall.data ?? [])
         .filter((item: apiItem) => item.type === 'dir')
         .map((item: apiItem) =>
-            <Link to={`/read/${item.name}`}>
+            <Link key={item.name} to={`/read/${item.name}`}>
                 <JournalItemDisplay journalKey={item.name}/>
             </Link>
         )
@@ -35,7 +35,7 @@ function JournalItemDisplay(props: {journalKey: string}){
         </h3>
         <div>
             {data?.keywords?.map((word: string) =>
-                <Link to={`/keyword/${word}`}>
+                <Link key={word} to={`/keyword/${word}`}>
                     {word}
                 </Link>
             )}
