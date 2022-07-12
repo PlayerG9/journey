@@ -14,9 +14,7 @@ const queryClient = new QueryClient()
 export default function App() {
     return <QueryClientProvider client={queryClient}>
         <HeaderMenu/>
-        <div className='main-content'>
-            <JourneyRouter />
-        </div>
+        <JourneyRouter />
         <FooterMenu/>
     </QueryClientProvider>
 }
