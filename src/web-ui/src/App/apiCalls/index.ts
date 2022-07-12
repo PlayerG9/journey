@@ -1,3 +1,4 @@
+import { marked } from "marked"
 import { HttpError } from "../generell"
 
 
@@ -85,7 +86,7 @@ export async function loadJournalMetadataList(){
 }
 
 
-export async function convertMarkdownToHtml(markdown: String) {
+export async function convertMarkdownToHtml(markdown: string) {
     const url = `https://api.github.com/markdown`
     const response = await fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -96,9 +97,14 @@ export async function convertMarkdownToHtml(markdown: String) {
             text: markdown
         })
     })
-    if(!response.ok){
+    if(response.ok){
+        return await response.text()
+    } else if(response.status === 403){  // 403 - Forbidden
+        // after to many requests to `url` github responses with 403-Forbidden
+        // marked is used as backup-plan. note: it doesn't support the languages-highlighting
+        return marked(markdown)
+    }
+    else {
         throw new HttpError(response.status, url)
     }
-    const data = await response.text()
-    return data
 }

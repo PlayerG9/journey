@@ -16,6 +16,10 @@ body.light-mode {
         color: inherit;
     }
 
+    textarea {
+        padding: 5px;
+    }
+
     // markdown related
 
     .markdown-body {
@@ -41,6 +45,11 @@ body.dark-mode {
 
     a, a:visited {
         color: inherit;
+    }
+
+    textarea {
+        background-color: #222;
+        color: #ddd;
     }
 
     // markdown related

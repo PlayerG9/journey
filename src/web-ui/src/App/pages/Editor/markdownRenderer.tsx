@@ -1,6 +1,5 @@
-import { convertMarkdownToHtml } from '../../apiCalls'
+import { marked } from 'marked' 
 import MarkdownHtmlViewer from '../../components/markdownHtmlViewer'
-import { useEffect, useState } from 'react'
 
 
 interface rendererProps {
@@ -9,12 +8,6 @@ interface rendererProps {
 
 
 export default function MarkdownRenderer(props: rendererProps){
-    const [html, setHtml] = useState("")
-
-    useEffect(() => {
-        convertMarkdownToHtml(props.markdownText)
-            .then((value: string) => setHtml(value))
-    })
-
+    const html = marked(props.markdownText)
     return <MarkdownHtmlViewer html={html}/>
 }
