@@ -13,7 +13,7 @@ export default function DisplayJournalView(props: {journalKey: string}){
     if(apiCall.isLoading){
         return <Loader/>
     }
-    if(apiCall.isError){
+    if(apiCall.isError || !apiCall.data){
         return <ErrorMessage error={apiCall.error}/>
     }
 
