@@ -1,8 +1,9 @@
 import { marked } from "marked"
 import { HttpError } from "../generell"
+import { preProcessHtmlMarkdown } from "./markdownPreProcessor"
 
 
-export async function loadGithubJournalContent(key: String | undefined) {
+export async function loadGithubJournalContent(key: string) {
     const url = `https://raw.githubusercontent.com/PlayerG9/journey/main/journal/${key}/README.md`
     const response = await fetch(url)
     if(!response.ok){
@@ -10,7 +11,8 @@ export async function loadGithubJournalContent(key: String | undefined) {
     }
     const markdown = await response.text()
     const html = await convertMarkdownToHtml(markdown)
-    return html
+    const betterHtml = await preProcessHtmlMarkdown(html, key)
+    return betterHtml
 }
 
 
@@ -20,7 +22,7 @@ interface journalMetadata {
 }
 
 
-export async function loadGithubJournalMetadata(key: String | undefined) {
+export async function loadGithubJournalMetadata(key: string) {
     const url = `https://raw.githubusercontent.com/PlayerG9/journey/main/journal/${key}/metadata.json`
     const response = await fetch(url)
     if(!response.ok){
