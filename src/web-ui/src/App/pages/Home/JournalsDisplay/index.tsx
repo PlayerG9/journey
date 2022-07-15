@@ -4,7 +4,7 @@ import { listGithubJournals, loadGithubJournalMetadata } from '../../../apiCalls
 import { Link } from 'react-router-dom'
 
 
-export default function JournalDisplay(){
+export default function JournalsDisplay(){
     const apiCall = useQuery(['journal-list'], listGithubJournals)
 
     const journalItems = (apiCall.data ?? [])
@@ -33,13 +33,13 @@ function JournalItemDisplay(props: {journalKey: string}){
         <h3>
             {data?.title ?? props.journalKey}
         </h3>
-        <div>
-            {data?.keywords?.map((word: string) =>
+        {data !== undefined && <div>
+            {data.keywords?.map((word: string) =>
                 <Link key={word} to={`/keyword/${word}`}>
                     {word}
                 </Link>
             )}
-        </div>
+        </div>}
     </div>
 }
 

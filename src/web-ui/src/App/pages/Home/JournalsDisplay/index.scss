@@ -1,4 +1,6 @@
 .journal-display {
+    padding: 5px 0px;
+
     > .box-list {
         display: flex;
         flex-wrap: wrap;
@@ -15,6 +17,7 @@
         }
 
         .box-list-item {
+            height: calc(100% - 20px);
             border: 1px solid black;
             border-radius: 10px;
             padding: 10px;
