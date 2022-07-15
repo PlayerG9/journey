@@ -1,17 +1,25 @@
 import './index.scss'
 import { useQuery } from 'react-query'
-import { listGithubJournals, loadGithubJournalMetadata } from '../../../apiCalls'
+import { loadJournalMetadataList } from '../../../apiCalls'
 import { Link } from 'react-router-dom'
 
 
 export default function JournalsDisplay(){
-    const apiCall = useQuery(['journal-list'], listGithubJournals)
+    const apiCall = useQuery(['journals-metalist'], loadJournalMetadataList)
 
     const journalItems = (apiCall.data ?? [])
-        .filter((item: apiItem) => item.type === 'dir')
-        .map((item: apiItem) =>
-            <Link key={item.name} to={`/read/${item.name}`}>
-                <JournalItemDisplay journalKey={item.name}/>
+        .map((item) =>
+            <Link key={item.file.name} to={`/read/${item.file.name}`} className='box-list-item secondary-bg'>
+                <h3>
+                    {item.metadata.title}
+                </h3>
+                <div>
+                    {item.metadata.keywords.map((word) =>
+                        <Link key={word} to={`/keyword/${word}`}>
+                            {word}
+                        </Link>
+                    )}
+                </div>
             </Link>
         )
 
@@ -21,30 +29,4 @@ export default function JournalsDisplay(){
             {journalItems}
         </div>
     </div>
-}
-
-
-function JournalItemDisplay(props: {journalKey: string}){
-    const result = useQuery(['', props.journalKey], () => loadGithubJournalMetadata(props.journalKey))
-
-    const data = result.data
-
-    return <div className='box-list-item secondary-bg'>
-        <h3>
-            {data?.title ?? props.journalKey}
-        </h3>
-        {data !== undefined && <div>
-            {data.keywords?.map((word: string) =>
-                <Link key={word} to={`/keyword/${word}`}>
-                    {word}
-                </Link>
-            )}
-        </div>}
-    </div>
-}
-
-
-interface apiItem {
-    name: string,
-    type: 'dir' | 'file'
 }

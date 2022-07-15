@@ -1,23 +1,18 @@
 .journal-display {
-    padding: 5px 0px;
-
     > .box-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: stretch;
-        align-content: space-around;
+        align-content: stretch;
         gap: 10px 15px;
 
         margin: 5px;
 
-        > a {
+        > .box-list-item {
             text-decoration: none;
             flex-grow: 1;
-        }
 
-        .box-list-item {
-            height: calc(100% - 20px);
             border: 1px solid black;
             border-radius: 10px;
             padding: 10px;
@@ -33,7 +28,6 @@
                 gap: 2px 5px;
 
                 > a {
-                    // background-color: aquamarine;
                     border-radius: 5px;
                     padding: 2px;
                     text-decoration: none;
