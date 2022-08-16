@@ -1,4 +1,4 @@
-/*! https://mths.be/he v1.2.0 by @mathias | MIT license */
+/*! highlight.js v9.16.2 | BSD3 License | git.io/hljslicense */
 
 /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
 
