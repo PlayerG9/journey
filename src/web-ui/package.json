@@ -11,8 +11,8 @@
     "@types/node": "^16.11.43",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.6",
+    "highlightjs": "^9.16.2",
     "marked": "^4.0.18",
-    "node-html-parser": "^5.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.1",
@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@types/highlightjs": "^9.12.2",
     "@types/marked": "^4.0.3",
     "@types/react": "^17.0.39",
     "gh-pages": "^3.2.3",
