@@ -1,6 +1,5 @@
-import { marked } from "marked"
 import { HttpError } from "../generell"
-import { preProcessHtmlMarkdown } from "./markdownPreProcessor"
+import { renderMarkdownString } from "./markdownRenderer"
 
 
 export async function loadGithubJournalContent(key: string) {
@@ -10,9 +9,8 @@ export async function loadGithubJournalContent(key: string) {
         throw new HttpError(response.status, url)
     }
     const markdown = await response.text()
-    const html = await convertMarkdownToHtml(markdown)
-    const betterHtml = await preProcessHtmlMarkdown(html, key)
-    return betterHtml
+    const html = renderMarkdownString(markdown, key)
+    return html
 }
 
 
@@ -85,28 +83,4 @@ export async function loadJournalMetadataList(){
     await Promise.all(promises)
 
     return metalist
-}
-
-
-export async function convertMarkdownToHtml(markdown: string) {
-    const url = `https://api.github.com/markdown`
-    const response = await fetch(url, {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        headers: {
-            accept: 'application/vnd.github+json'
-        },
-        body: JSON.stringify({
-            text: markdown
-        })
-    })
-    if(response.ok){
-        return await response.text()
-    } else if(response.status === 403){  // 403 - Forbidden
-        // after to many requests to `url` github responses with 403-Forbidden
-        // marked is used as backup-plan. note: it doesn't support the languages-highlighting
-        return marked(markdown)
-    }
-    else {
-        throw new HttpError(response.status, url)
-    }
 }
